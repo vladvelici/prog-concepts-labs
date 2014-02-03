@@ -1,0 +1,3 @@
+let rec len = function
+	| [] -> 0
+	| _::l -> 1 + (len l)
