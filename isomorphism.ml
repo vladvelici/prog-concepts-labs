@@ -21,3 +21,15 @@ let test:(string, float, int) tT = "hello", sm;;
 print_string "here it comes";;
 
 tU_to_tT (tT_to_tU test);;
+
+let sm2:(string, bool) sum = R false;;
+let test2 = (sm, sm2);;
+
+let prodToSums (prod:(('a, 'b) sum * ('c, 'd) sum)) = 
+        match prod with
+                | (left, right) -> (match right with
+                                | L k -> tT_to_tU ((left, k):('x, 'y, 'z) tT)
+                                | R k -> tT_to_tU ((left, k):('x, 'y, 'z) tT)
+                );;
+
+
