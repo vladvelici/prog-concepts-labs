@@ -1,14 +1,9 @@
 /* File sldparser.mly */
-
+%{ open Path %}
 %token <int> INT
 %token IFFREE ELSE UP DOWN LEFT RIGHT
 %token LPAREN RPAREN
 %token EOL
-%left PLUS MINUS        /* lowest precedence */
-%left MODULO
-%left TIMES DIV         /* medium precedence */
-%left EXPONENTIAL
-%nonassoc UMINUS        /* highest precedence */
 %start main             /* the entry point */
 %type <Path.pTerm> main
 %%
